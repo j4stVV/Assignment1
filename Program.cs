@@ -92,13 +92,11 @@ namespace Assignment1
             {
                 try
                 {
-                    Output("Enter Make:");
-                    string make = Console.ReadLine() ?? "Invalid Make";
+                    string make = CheckValid.CheckNonEmptyInput("Enter Make: ");
 
-                    Output("Enter Model: ");
-                    string model = Console.ReadLine() ?? "Invalid Model";
+                    string model = CheckValid.CheckNonEmptyInput("Enter Model: ");
 
-                    Output("Enter Year: ");
+                    Console.Write("Enter Year: ");
                     int year = CheckValid.CheckValidYear();
 
                     Output("Enter Type (0 for Electric, 1 for Fuel): ");
