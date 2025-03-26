@@ -114,8 +114,7 @@ namespace Assignment1
 
             static void SearchByCarMake()
             {
-                Output("Enter Make to search: ");
-                string make = Console.ReadLine() ?? "Invalid Make";
+                string make = CheckValid.CheckNonEmptyInput("Enter Make to search: ");
 
                 var result = cars.Where(carMake => carMake.Make == make).ToList();
                 
@@ -140,8 +139,7 @@ namespace Assignment1
 
             static void RemoveByModel()
             {
-                Output("Enter Model to remove: ");
-                string ?model = Console.ReadLine();
+                string model = CheckValid.CheckNonEmptyInput("Enter Model to Remove: ");
 
                 var carToRemove = cars.FirstOrDefault(carModel => carModel.Model == model);
 
